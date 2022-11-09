@@ -34,10 +34,24 @@ with open('C:\\get-lab-1-main\\pasha\\report\\4.txt', 'r') as f:
             ca_y.append(int(line))
             ca_x.append(160)
 k, b = tuple(np.polyfit(ca_x, ca_y, 1))
-print(k)
-#pyplot.scatter(ca_x, ca_y)
+fig, a = pyplot.subplots(figsize=(16, 9), dpi=400)
+a.set_xlabel("Количество делений")
+a.set_ylabel("Показания АЦП")
+a.set_title("Калибровка")
+a.scatter(ca_x, ca_y)
 x = [1, 160]
 y = [k+b, 160*k+b]
+a.plot(x, y)
+a.minorticks_on()
+a.grid(which='major')
+a.grid(which='minor', linestyle=':')
+fig.savefig("calibrate.png")
+
+
+
+
+
+
 
 eg_1_x = []
 eg_1_y = []
