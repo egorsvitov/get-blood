@@ -4,10 +4,6 @@ import time
 import numpy as np
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
-start = time.time()
-# GPIO.setup(11, GPIO.IN)
-# GPIO.setup(10, GPIO.IN)
-# GPIO.setup(9, GPIO.IN)
 
 
 ########################################
